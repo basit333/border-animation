@@ -15,7 +15,6 @@ body {
 
 .box {
   width: 500px;
-  /* height: 500px; */
   position: relative;
 }
 
@@ -28,7 +27,7 @@ body {
   left: 0;
   top: 0;
   transform-origin: center;
-  animation: borderHeightAnimation 2s forwards;
+  animation: borderHeightAnimation .5s linear forwards;
 }
 
 @keyframes borderHeightAnimation {
@@ -44,13 +43,12 @@ body {
 .box::after {
   content: "";
   width: 100%;
-  height: 0;
   background: linear-gradient(9deg, #70D8FA, #5A4EF5);
   position: absolute;
   left: 0;
   bottom: 0;
   transform-origin: left;
-  animation: borderWidthAnimation 2s forwards 1s;
+  animation: borderWidthAnimation 1s linear forwards .5s;
 }
 
 .box__ul--container {
@@ -68,13 +66,12 @@ body {
 .box__ul--item::before {
   content: "";
   width: 100%;
-  height: 0;
   background: linear-gradient(9deg, #70D8FA, #5A4EF5);
   position: absolute;
   left: 0;
   top: 0;
   transform-origin: left;
-  animation: borderWidthAnimation 2s forwards 1s;
+  animation: borderWidthAnimation 1s linear forwards .5s;
 }
 
 @keyframes borderWidthAnimation {
